@@ -12,7 +12,7 @@ def get_post_count(user_id):
 
     return int(POSTS_PATTERN.findall(r1.read())[0].replace(",", ""))
 
-# users.txt contains the <options> elements from the "Skicka ett privat meddelande"
+# users.txt contains the <option> elements from the "Skicka ett privat meddelande"
 # page on happymtb.org
 with open("users.txt") as f:
   users = [PROFILE_PATTERN.findall(line)[0] for line in f if line.strip()]
